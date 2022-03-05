@@ -2,7 +2,7 @@
 	interface homework {
 		subject: string,
 		task: string,
-		due: Date
+		due: string
 	};
 
 	export let pending: homework[];
