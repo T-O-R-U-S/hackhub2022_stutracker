@@ -77,7 +77,7 @@
 		{/if}
 		<div class="homework">
 			<input type="text" name="desc" id="desc" placeholder="Description">
-			<input type="text" name="subject" id="subject" placeholder="Subject">
+			<input type="text" name="subject" id="subject" placeholder="Title">
 			<input type="date" name="due" id="due" placeholder="Due date">
 			<button class="font-extrabold bg-yellow-300 text-yellow-600 outline outline-yellow-300 outline-2 h-7 rounded-md" on:click={add_homework}>
 				Add
