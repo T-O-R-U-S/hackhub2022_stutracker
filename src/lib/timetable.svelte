@@ -23,7 +23,7 @@
 </script>
 
 <h1 class="text-3xl font-bold font-serif text-center mt-12">Your daily timetable:</h1>
-<main class="bg-orange-200 flex flex-wrap flex-row h-56 w-5/6 mx-auto mt-4 p-3 rounded-xl shadow-sm">
+<main class="bg-orange-200 flex flex-col md:flex-row flex-wrap flex-row min-h-[7rem] w-5/6 mx-auto mt-4 p-3 rounded-xl shadow-sm">
 	{#each times as time}
 		<div class="p-4 bg-white rounded-xl shadow-md m-2 min-w-fit flex flex-col">
 			<p class="font-bold text-2xl">{time.name}</p>

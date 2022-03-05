@@ -54,7 +54,7 @@
 	}
 </script>
 
-<h1 class="text-3xl font-bold font-serif text-center mt-8">Your pending homework:</h1>
+<h1 class="text-3xl font-bold font-serif text-center mt-8">Your reminders:</h1>
 <main class="flex bg-orange-200 w-5/6 min-h-[150px] rounded-xl mx-auto mt-4">
 	<div class="min-h-full w-5 bg-orange-500 rounded-tl-xl rounded-bl-xl">
 		‌

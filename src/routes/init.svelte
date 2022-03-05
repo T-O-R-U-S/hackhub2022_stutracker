@@ -82,12 +82,12 @@
 </script>
 <div class="flex flex-col content-center justify-center">
 <h1 class="text-center font-bold text-6xl">Looks like this is your first time!</h1>
-<h2 class="text-center font-extrabold text-4xl">Let's help you get set up!</h2>
+<h2 class="text-center font-extrabold text-4xl">We just need your daily timetable to get you setup!</h2>
 
 <table class="bg-orange-200 lg:rounded-xl p-3 lg:w-5/6 w-full mx-auto mt-12 shadow-md">
 	<tr>
 		<th>Timing</th>
-		<th>Subject</th>
+		<th>Task</th>
 		<th>Extra info (optional)</th>
 		<th></th>
 	</tr>
@@ -101,7 +101,7 @@
 	{/each}
 	<tr>
 		<td><input type="time" name="start" id="start"> <input type="time" name="end" id="end"></td>
-		<td><input type="text" name="subject" id="subject" placeholder="Science, Maths, Music"></td>
+		<td><input type="text" name="subject" id="subject" placeholder="Science, Math, Daily Standup Meeting"></td>
 		<td><input type="text" name="info" id="info" placeholder="Teacher name, room number"></td>
 		<td><button class="green-button w-7 m-3" on:click={addSubject}>+</button></td>
 	</tr>
