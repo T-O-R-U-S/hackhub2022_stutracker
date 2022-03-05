@@ -7,7 +7,7 @@
 
 	if(browser) {
 		if (!localStorage.getItem("init")) {
-			window.location.replace("/init")
+			window.location.replace("/hackhub2022_stutracker/init")
 		}
 	}
 </script>

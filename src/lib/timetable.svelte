@@ -30,7 +30,7 @@
 			return
 		}
 		
-		window.location.replace("/init")
+		window.location.replace("/hackhub2022_stutracker/init")
 	}
 </script>
 
