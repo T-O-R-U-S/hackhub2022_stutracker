@@ -20,6 +20,18 @@
 			};
 			return out.join("")
 		}
+	
+	let sure = false;
+	
+	function confirm(e) {
+		if(!sure) {
+			e.target.innerText = "You sure?"
+			sure = true;
+			return
+		}
+		
+		window.location.replace("/init")
+	}
 </script>
 
 <h1 class="text-3xl font-bold font-serif text-center mt-12">Your daily timetable:</h1>
@@ -32,3 +44,6 @@
 		</div>
 	{/each}
 </main>
+<button class="font-light text-sm bg-red-300 text-red-600 outline outline-red-300 outline-2 m-3 p-1 h-7 rounded-md ml-[10%]" on:click={confirm}>
+	Reset timetable
+</button>

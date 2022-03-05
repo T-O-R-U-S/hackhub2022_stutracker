@@ -102,7 +102,7 @@
 	<tr>
 		<td><input type="time" name="start" id="start"> <input type="time" name="end" id="end"></td>
 		<td><input type="text" name="subject" id="subject" placeholder="Science, Math, Daily Standup Meeting"></td>
-		<td><input type="text" name="info" id="info" placeholder="Teacher name, room number"></td>
+		<td><input type="text" name="info" id="info" placeholder="Extra info like teacher name or room number"></td>
 		<td><button class="green-button w-7 m-3" on:click={addSubject}>+</button></td>
 	</tr>
 </table>

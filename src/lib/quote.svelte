@@ -30,4 +30,4 @@
     }
 </script>
 
-<h1 class="text-orange-500 font-light font-serif text-2xl text-center italic w-5/6 mx-auto">{quote}</h1>
+<h1 class="text-orange-500 font-light font-serif text-2xl text-center italic w-5/6 mx-auto">{quote ?? ""}</h1>
