@@ -89,7 +89,7 @@
 
 <style lang="postcss">
 	.homework {
-		@apply p-3 bg-white rounded-md shadow-md min-h-[8rem] m-3 max-w-fit transition-all flex flex-col;
+		@apply p-3 bg-white rounded-md shadow-md min-h-[8rem] m-3 max-w-fit transition-all flex flex-col min-w-[8rem];
 	}
 
 	.homework input {
