@@ -76,7 +76,7 @@
 		if(browser) {
 			localStorage.setItem("init", "true");
 			localStorage.setItem("subjects", JSON.stringify(subjects));
-			window.location.replace("/")
+			window.location.replace("/hackhub2022_stutracker")
 		}
 	}
 </script>
