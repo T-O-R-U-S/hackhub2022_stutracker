@@ -23,7 +23,7 @@
 	
 	let sure = false;
 	
-	function confirm(e) {
+	function confirm(e: Event) {
 		if(!sure) {
 			e.target.innerText = "You sure?"
 			sure = true;
