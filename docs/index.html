@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="/hackhub2022_stutracker/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/hackhub2022_stutracker/_app/assets/pages/__layout.svelte-6babf2b2.css">
+	<link rel="stylesheet" href="/hackhub2022_stutracker/_app/assets/pages/index.svelte-0124a3de.css">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/start-34fd34a8.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/chunks/vendor-521924bd.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/pages/__layout.svelte-57239cd6.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/pages/index.svelte-2d74aa50.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/chunks/store-991a127d.js">
+	</head>
+	<body>
+		<div>
+
+
+<h1 class="text-3xl font-bold font-serif text-center mt-12">Your daily timetable:</h1>
+<main class="bg-orange-200 flex flex-col lg:flex-row flex-wrap min-h-[7rem] w-5/6 mx-auto mt-4 p-3 rounded-xl shadow-sm"></main>
+<button class="font-light text-sm bg-red-300 text-red-600 outline outline-red-300 outline-2 m-3 p-1 h-7 rounded-md ml-[10%]">Reset timetable
+</button>
+
+<h1 class="text-orange-500 font-light font-serif text-2xl text-center italic w-5/6 mx-auto"></h1>
+
+<h1 class="text-3xl font-bold font-serif text-center mt-8">Your reminders:</h1>
+<main class="flex bg-orange-200 w-5/6 min-h-[150px] rounded-xl mx-auto mt-4"><div class="min-h-full w-5 bg-orange-500 rounded-tl-xl rounded-bl-xl">‌
+	</div>
+	<div class="flex flex-wrap w-full h-full mx-auto rounded-xl">
+		<h1 class="text-center font-semibold w-full m-5">Looks like you&#39;re done!
+		</h1>
+		<div class="homework svelte-q14l1"><input type="text" name="desc" id="desc" placeholder="Task" class="svelte-q14l1">
+			<input type="text" name="subject" id="subject" placeholder="Details" class="svelte-q14l1">
+			<label for="due" class="text-center">Due date:</label>
+			<input type="date" name="due" id="due" class="svelte-q14l1">
+			<button class="font-extrabold bg-yellow-300 text-yellow-600 outline outline-yellow-300 outline-2 h-7 rounded-md">Add
+			</button></div></div>
+</main>
+
+
+		<script type="module" data-hydrate="kmrivv">
+		import { start } from "/hackhub2022_stutracker/_app/start-34fd34a8.js";
+		start({
+			target: document.querySelector('[data-hydrate="kmrivv"]').parentNode,
+			paths: {"base":"/hackhub2022_stutracker","assets":"/hackhub2022_stutracker"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/hackhub2022_stutracker/_app/pages/__layout.svelte-57239cd6.js"),
+						import("/hackhub2022_stutracker/_app/pages/index.svelte-2d74aa50.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

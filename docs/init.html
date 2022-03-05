@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="/hackhub2022_stutracker/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/hackhub2022_stutracker/_app/assets/pages/__layout.svelte-6babf2b2.css">
+	<link rel="stylesheet" href="/hackhub2022_stutracker/_app/assets/pages/init.svelte-f9627cf5.css">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/start-34fd34a8.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/chunks/vendor-521924bd.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/pages/__layout.svelte-57239cd6.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/pages/init.svelte-37ef24ca.js">
+	<link rel="modulepreload" href="/hackhub2022_stutracker/_app/chunks/store-991a127d.js">
+	</head>
+	<body>
+		<div>
+
+
+<div class="flex flex-col content-center justify-center"><h1 class="text-center font-bold text-6xl">Looks like this is your first time!</h1>
+<h2 class="text-center font-extrabold text-4xl">We just need your daily timetable to get you setup!</h2>
+
+<table class="bg-orange-200 lg:rounded-xl p-3 lg:w-5/6 w-full mx-auto mt-12 shadow-md"><tr><th>Timing</th>
+		<th>Task</th>
+		<th>Extra info (optional)</th>
+		<th></th></tr>
+	
+	<tr><td><input type="time" name="start" id="start" class="svelte-jt0gvl"> <input type="time" name="end" id="end" class="svelte-jt0gvl"></td>
+		<td><input type="text" name="subject" id="subject" placeholder="Science, Math, Daily Standup Meeting" class="svelte-jt0gvl"></td>
+		<td><input type="text" name="info" id="info" placeholder="Extra info like teacher name or room number" class="svelte-jt0gvl"></td>
+		<td><button class="green-button w-7 m-3 svelte-jt0gvl">+</button></td></tr></table>
+
+<button class="font-sans w-28 text-center green-button mt-3 ml-[50%] -translate-x-1/2 svelte-jt0gvl">Ready to go!</button>
+</div>
+
+
+		<script type="module" data-hydrate="8qxwji">
+		import { start } from "/hackhub2022_stutracker/_app/start-34fd34a8.js";
+		start({
+			target: document.querySelector('[data-hydrate="8qxwji"]').parentNode,
+			paths: {"base":"/hackhub2022_stutracker","assets":"/hackhub2022_stutracker"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/hackhub2022_stutracker/_app/pages/__layout.svelte-57239cd6.js"),
+						import("/hackhub2022_stutracker/_app/pages/init.svelte-37ef24ca.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>
