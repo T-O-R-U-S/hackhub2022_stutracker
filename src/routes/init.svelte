@@ -71,7 +71,7 @@
 		};
 	}
 
-	function submit(e) {
+	function submit(e: Event) {
 		timetable.set(subjects);
 		if(browser) {
 			localStorage.setItem("init", "true");
