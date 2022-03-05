@@ -1,23 +1,56 @@
 <script lang="ts">
+	import { browser } from "$app/env";
+
+
 	interface homework {
 		subject: string,
 		task: string,
 		due: string
 	};
 
-	export let pending: homework[];
+	let pending = [];
+
+	if(typeof localStorage != 'undefined') {
+		pending = JSON.parse(localStorage.getItem("homework") ?? "[]");
+	}
 
 	function parent_factory(i: number) {
 		return (e: Event) => {
 			e.target.parentElement.style.opacity = "0%";
-			pending.splice(i, -1);
-			// Svelte will not register that
-			// pending has changed until
-			// this is done. This is stated
-			// in the documentation.
-			pending = pending;
-			e.target.parentElement.remove();
+			// Wait for animation to finish
+			setTimeout(() => { 
+				pending.splice(i, 1); 
+				// Svelte will not register that
+				// `pending` has changed until
+				// this is done. This is stated
+				// in the documentation.
+				pending = pending;
+				
+				if(browser) {
+					localStorage.setItem("homework", JSON.stringify(pending));
+				}
+
+				e.target.parentElement.remove();
+			}, 250);
 		}
+	}
+
+	function add_homework() {
+		let desc = document.getElementById("desc");
+		let subject = document.getElementById("subject");
+		let due = document.getElementById("due");
+
+		let hw: homework = {
+			subject: subject.value,
+			task: desc.value,
+			due: due.value,
+		};
+
+		pending.push(hw);
+
+		pending = pending;
+
+		localStorage.setItem("homework", JSON.stringify(pending));
 	}
 </script>
 
@@ -28,7 +61,7 @@
 	</div>
 	<div class="flex flex-wrap w-full h-full mx-auto rounded-xl">
 		{#each pending as pending, i}
-		<div class="p-3 bg-white rounded-md shadow-md h-32 m-3 max-w-fit transition-all">
+		<div class="homework">
 				<h1>{pending.task}</h1>
 				<h1>{pending.subject}</h1>
 				<h1>{pending.due}</h1>
@@ -42,5 +75,23 @@
 			Looks like you're done!
 		</h1>
 		{/if}
+		<div class="homework">
+			<input type="text" name="desc" id="desc" placeholder="Description">
+			<input type="text" name="subject" id="subject" placeholder="Subject">
+			<input type="date" name="due" id="due" placeholder="Due date">
+			<button class="font-extrabold bg-yellow-300 text-yellow-600 outline outline-yellow-300 outline-2 h-7 rounded-md" on:click={add_homework}>
+				Add
+			</button>
+		</div>
 	</div>
 </main>
+
+<style>
+	.homework {
+		@apply p-3 bg-white rounded-md shadow-md min-h-[8rem] m-3 max-w-fit transition-all flex flex-col;
+	}
+
+	.homework input {
+		@apply outline outline-2 m-3 rounded-md;
+	}
+</style>

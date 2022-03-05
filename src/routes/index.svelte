@@ -3,142 +3,17 @@
 	import Timetable from "../lib/timetable.svelte";
 
 	import { browser } from "$app/env";
-	import { writable } from "svelte/store";
-
-	interface timing {
-		name: string,
-		info: string,
-		// 24-hour time.
-		timing: [number, number]
-	};
-
-	export const timetable = writable<timing[]>([
-
-	]);
+	import Quote from "$lib/quote.svelte";
 
 	if(browser) {
-		if (!localStorage.getItem("Init")) {
+		if (!localStorage.getItem("init")) {
 			window.location.replace("/init")
 		}
 	}
-
-	const d = new Date().toDateString();
 </script>
 
-<Timetable timetable={
-	[
-		{
-			name: "Science",
-			info: "Mr. Scientist",
-			timing: [740, 800]
-		},
-		{
-			name: "Science",
-			info: "Mr. Scientist",
-			timing: [800, 855]
-		},
-		{
-			name: "Science",
-			info: "Mr. Scientist",
-			timing: [855, 950]
-		},
-	]
-} />
+<Timetable />
 
-<Homework pending={[
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-	{
-		subject: "Science",
-		task: "Do science",
-		due: d,
-	},
-]}></Homework>
+<Quote></Quote>
+
+<Homework></Homework>
